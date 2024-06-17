@@ -17,7 +17,7 @@ server.use(express.static(path.join(__dirname, '../public')))
 server.use(mainRoutes)
 
 server.use((req, res) => {
-    res.status(404).send('Erro 404 - Página não encontrada')
+    res.render('./pages/404')
 })
 
 console.log(`Servidor rodando em: http://localhost:${process.env.PORT}`)
